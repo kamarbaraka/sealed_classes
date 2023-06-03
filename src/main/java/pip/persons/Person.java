@@ -8,6 +8,7 @@ permits Student, Teacher, Cook, Janitor{
     public Person(String name){
         this.name = name;
     }
-    public abstract String type();
+    protected abstract String type();
+    @Override
     public abstract String toString();
 }

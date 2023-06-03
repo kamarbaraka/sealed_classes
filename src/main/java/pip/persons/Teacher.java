@@ -37,6 +37,13 @@ extends Person {
         System.out.println(HashMap.class);
 
         var teacher = new Teacher("kahindi", "winners", 2446);
-        System.out.println(teacher.toString());
+        var teacherClass = teacher.getClass();
+        System.out.println(Arrays.toString(teacherClass.getDeclaredFields()));
+
+        var dummyArray = new int[3];
+        Arrays.fill(dummyArray, 5);
+
+        dummyArray = Arrays.copyOf(dummyArray, 2 * dummyArray.length);
+        dummyArray[3] = 9;
     }
 }
